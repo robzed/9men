@@ -24,8 +24,9 @@
 
 
 : ESC ( ch -- )  $1B EMIT EMIT ;
-\ ESC [
-: ESC[ [char] [ ESC ;
+\ ESC[ is defined by gForth (see esc[ )
+\ : ESC[ [char] [ ESC_n ;
+
 \ ESC [ ch
 : CSI ( ch -- ) ESC[ EMIT ; 
 : HOME [char] H CSI ;

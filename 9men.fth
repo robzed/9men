@@ -177,10 +177,10 @@ loop
 : gc->y ( gamecell -- y )
 ;
 
-: black ( gamecell -- )
-;
-: white ( gamecell -- )
-;
+\ : black ( gamecell -- )
+\ ;
+\ : white ( gamecell -- )
+\ ;
 
 require ANSI.fth
 
@@ -274,25 +274,22 @@ create map_data gamecells allot
   dup inbounds if
     S" Invalid Position" >status
     drop
-  else spare_black 0 = IF
-    S" No more spares left" > status
+  else spare_black 0= IF
+    S" No more spares left" >status
     drop
   else 
     spare_black 1- to spare_black
-    
-  then
+  then then
 ;
-
 
 : 9men
   clear_map
   draw_map
   show_cell#
-  
+  cr cr
 ;
 
-
-
+9men
 \ bye
 
 
