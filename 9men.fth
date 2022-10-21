@@ -1,7 +1,9 @@
 #! /usr/bin/env gforth
 \ 9 men morris prototype
 \ 
-\ Goal: Make a 10 lines version for Jupiter Ace
+\ Test ideas for 9 men morris
+\
+\ Ultimate Goal: Make a 10 lines version for Jupiter Ace
 \ 
 
 require ttester.fs
